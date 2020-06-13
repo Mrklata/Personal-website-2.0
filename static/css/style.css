@@ -68,6 +68,9 @@ section img {
   font-size: 25px;
   color: white; }
 
+@media only screen and (max-device-width: 600px) {
+  p {
+    display: none; } }
 ul {
   position: absolute;
   left: 50%;
