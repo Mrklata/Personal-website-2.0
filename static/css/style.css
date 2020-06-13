@@ -69,7 +69,7 @@ section img {
   color: white; }
 
 @media only screen and (max-device-width: 600px) {
-  p {
+  .description {
     display: none; } }
 ul {
   position: absolute;
