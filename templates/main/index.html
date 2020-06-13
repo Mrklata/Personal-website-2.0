@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-<div id="contact">
-    <a href="https://github.com/Mrklata"><img src="{% static 'img/git.png' %}" alt="img"></a>
-    <a href="https://www.linkedin.com/in/%C5%82ukasz-kowalczyk-35259b19b/"><img src="{% static 'img/link.png' %}" alt="img"></a>
-    <a href="mailto:lukasz98kowalczyk@gamail.com"><img src="{% static 'img/mail.png' %}" alt="img"></a>
-</div>
+{#<div id="contact">#}
+{#    <a href="https://github.com/Mrklata"><img src="{% static 'img/git.png' %}" alt="img"></a>#}
+{#    <a href="https://www.linkedin.com/in/%C5%82ukasz-kowalczyk-35259b19b/"><img src="{% static 'img/link.png' %}" alt="img"></a>#}
+{#    <a href="mailto:lukasz98kowalczyk@gamail.com"><img src="{% static 'img/mail.png' %}" alt="img"></a>#}
+{#</div>#}
 <section>
     <img src="{% static 'img/bg.jpg' %}" id="bg" alt="img">
     <img src="{% static 'img/moon.png' %}" id="moon" alt="img">
@@ -57,13 +58,13 @@
 
 </script>
 
-<ul>
-    <li class="active" onclick="toggle_visibility('desc'); toggle_visibility_header('desch')">1</li>
-    <li onclick="toggle_visibility('desc2'); toggle_visibility_header('desc2h')">2</li>
-    <li onclick="toggle_visibility('desc3'); toggle_visibility_header('desc3h')">3</li>
-    <li onclick="toggle_visibility('desc4'); toggle_visibility_header('desc4h')">4</li>
-
-
-</ul>
+{#<ul>#}
+{#    <li class="active" onclick="toggle_visibility('desc'); toggle_visibility_header('desch')">1</li>#}
+{#    <li onclick="toggle_visibility('desc2'); toggle_visibility_header('desc2h')">2</li>#}
+{#    <li onclick="toggle_visibility('desc3'); toggle_visibility_header('desc3h')">3</li>#}
+{#    <li onclick="toggle_visibility('desc4'); toggle_visibility_header('desc4h')">4</li>#}
+{##}
+{##}
+{#</ul>#}
 </body>
 </html>
