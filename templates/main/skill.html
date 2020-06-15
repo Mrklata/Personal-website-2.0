@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{#<div id="contact">#}
+{#    <a href="https://github.com/Mrklata"><img src="{% static 'img/git.png' %}" alt="img"></a>#}
+{#    <a href="https://www.linkedin.com/in/%C5%82ukasz-kowalczyk-35259b19b/"><img src="{% static 'img/link.png' %}" alt="img"></a>#}
+{#    <a href="mailto:lukasz98kowalczyk@gamail.com"><img src="{% static 'img/mail.png' %}" alt="img"></a>#}
+{#</div>#}
+<section>
+    <img src="{% static 'img/bg.jpg' %}" id="bg" alt="img">
+    <img src="{% static 'img/moon.png' %}" id="moon" alt="img">
+    <img src="{% static 'img/mountain.png' %}" id="mountain" alt="img">
+    <img src="{% static 'img/road.png' %}" id="road" alt="img">
+    <h2 id="text">{{ lang.title }}</h2>
+</section>
+<script>
+    let bg = document.getElementById("bg");
+    let moon = document.getElementById("moon");
+    let mountain = document.getElementById("mountain");
+    let road = document.getElementById("road");
+    let text = document.getElementById("text");
+
+    window.addEventListener('scroll', function () {
+        var value = window.scrollY;
+
+        bg.style.top = value * 0.5 + 'px';
+        moon.style.left = -value * 0.5 + 'px';
+        mountain.style.top = -value * 0.15 + 'px';
+        road.style.top = value * 0.15 + 'px';
+        text.style.top = value + 'px';
+    })
+</script>
+<div class="description">
+    <p id="desc" class="on">
+        {{ lang.description }}
+    </p>
+</div>
+<div id="empty">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Mrklata"><img
+            src="{% static 'img/git.png' %}" alt="img"></a>
+    <a target="_blank" rel="noopener noreferrer"
+       href="https://www.linkedin.com/in/%C5%82ukasz-kowalczyk-35259b19b/"><img src="{% static 'img/link.png' %}"
+                                                                                alt="img"></a>
+    <a target="_blank" rel="noopener noreferrer" href="mailto:lukasz98kowalczyk@gamail.com"><img
+            src="{% static 'img/mail.png' %}" alt="img"></a>
+</div>
+</body>
+</html>

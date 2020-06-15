@@ -50,80 +50,31 @@
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
+            {% for i in lang %}
+
             <div class="swiper-slide">
                 <div class="card">
                     <div class="sliderText">
-                        <h3>PYTHON</h3>
+                        <h3>{{ i.title }}</h3>
                     </div>
                     <div class="content">
-                        <p>Python was the first language I have learned. I started, of course, with printing 'hello
-                            world'. At this
-                            point I am using a lot of libraries for many different tasks from Data Science (pandas) up
-                            to writing simple
-                            games (pygame). I am also very familiar with the concept of OOP ...</p>
-                        <a href="#">Read More</a>
+                        <p>{{ i.desc_short }}</p>
+                        <a href="{{i.get_absolute_url}}">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="card">
-                    <div class="sliderText">
-                        <h3>DJANGO</h3>
-                    </div>
-                    <div class="content">
-                        <p>Right from the beginning of my journey with python i decided to use it mostly for (back-end,
-                            sometimes
-                            full-stack) web development. So i started to learn django...</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card">
-                    <div class="sliderText">
-                        <h3>HTML & CSS</h3>
-                    </div>
-                    <div class="content">
-                        <p>I stared using HTML-5 while working on my first project. It was a simple web site for
-                            carpentry shop... I started from simple hovers, now it's getting pretty great...</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card">
-                    <div class="sliderText">
-                        <h3>JAVASCRIPT</h3>
-                    </div>
-                    <div class="content">
-                        <p>About JavaScript... I recently started my journey witch this language, but I am starting to
-                            get along with it really well...</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card">
-                    <div class="sliderText">
-                        <h3>BASH & R</h3>
-                    </div>
-                    <div class="content">
-                        <p>I learned bash while working with Ubuntu software. I am still increasing my bash in usage of
-                            creating
-                            projects in django with git, manipulating files, creating conf files. I am also familiar
-                            with bash nano and
-                            creating alias...</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
+
+            {% endfor %}
         </div>
     </div>
     <div id="empty">
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Mrklata"><img src="{% static 'img/git.png' %}" alt="img"></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/%C5%82ukasz-kowalczyk-35259b19b/"><img src="{% static 'img/link.png' %}"
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Mrklata"><img
+                src="{% static 'img/git.png' %}" alt="img"></a>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://www.linkedin.com/in/%C5%82ukasz-kowalczyk-35259b19b/"><img src="{% static 'img/link.png' %}"
                                                                                     alt="img"></a>
-        <a target="_blank" rel="noopener noreferrer" href="mailto:lukasz98kowalczyk@gamail.com"><img src="{% static 'img/mail.png' %}" alt="img"></a>
+        <a target="_blank" rel="noopener noreferrer" href="mailto:lukasz98kowalczyk@gamail.com"><img
+                src="{% static 'img/mail.png' %}" alt="img"></a>
     </div>
     <script src="{% static 'js/swiper.min.js' %}"></script>
     <script>
